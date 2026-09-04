@@ -11,6 +11,7 @@ index.html          the whole site
 assets/styles.css    all styling — edit the tokens at the top to re-skin
 the-square-pizza.zip  the distributable template (produced by build-zip.sh)
 build-zip.sh         regenerates the zip, stripping demo-only bits
+publii-theme/        the same site as an installable Publii theme (visual editing, no code)
 ```
 
 ---
@@ -37,17 +38,18 @@ build-zip.sh         regenerates the zip, stripping demo-only bits
    the "Want a site like this?" section, the footer credit, the `noindex` tag).
    `build-zip.sh` already does this for the packaged `the-square-pizza.zip`.
 
-## Prefer a visual editor? Use Publii
+## Prefer a visual editor? Install the Publii theme
 
-[Publii](https://getpublii.com) is a free, open-source desktop app that gives you a
-WYSIWYG editor and one-click publishing — no code.
+[Publii](https://getpublii.com) is a free, open-source desktop app with a WYSIWYG
+editor and one-click publishing, no code. This repo ships the whole site as an
+installable Publii theme in [`publii-theme/`](publii-theme/).
 
 1. Install Publii, create a new site.
-2. Rebuild these three sections as Publii pages/posts, or paste the markup into a
-   custom HTML block. Move `assets/styles.css` into your theme's `assets/css` and
-   `@import` it, or drop the rules into the theme's custom CSS.
-3. Add the badge and booking `<div>` + `<script>` snippets as a custom HTML block on
-   the relevant page.
+2. **Theme → Install theme → Install from file**, pick
+   `publii-theme/the-square-pizza-theme.zip`, activate it.
+3. Open **Theme** and edit the text, menu, hours, colours and your Selected With
+   Trust listing ID in the settings panel. Full walk-through:
+   [`publii-theme/README.md`](publii-theme/README.md).
 4. Set the server under **Settings → Server** (see hosting below) and hit **Sync**.
 
 ## Hosting — pick one, all have a free tier

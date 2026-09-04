@@ -1,0 +1,28 @@
+{{! Standalone page (e.g. Privacy, Allergens). Optional - a restaurant site can
+    run on the front page alone. }}
+{{> head}}
+{{> navbar}}
+
+<main class="prose">
+   {{#page}}
+      <article class="section">
+         <h1>{{title}}</h1>
+
+         {{#featuredImage}}
+            {{#if url}}
+               <figure class="prose-figure">
+                  <img src="{{url}}" {{lazyload "eager"}} height="{{height}}" width="{{width}}" alt="{{alt}}">
+               </figure>
+            {{/if}}
+         {{/featuredImage}}
+
+         <div class="prose-body">
+            {{{text}}}
+         </div>
+      </article>
+   {{/page}}
+
+   {{{@commentsCustomCode}}}
+</main>
+
+{{> footer}}

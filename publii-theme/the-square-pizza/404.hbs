@@ -1,0 +1,13 @@
+{{> head}}
+{{> navbar}}
+
+<main class="prose">
+   <section class="section error-404">
+      <p class="kicker">{{ translate 'error.kicker' }}</p>
+      <h1>{{ translate 'error.404' }}</h1>
+      <p class="section-lede">{{ translate 'error.message' }}</p>
+      <a class="btn btn-primary" href="{{@website.url}}">{{ translate 'error.button' }}</a>
+   </section>
+</main>
+
+{{> footer}}

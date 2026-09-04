@@ -1,0 +1,29 @@
+{
+   "partials": {
+      "pagination": {
+         "prev": "Previous",
+         "next": "Next"
+      }
+   },
+
+   "post": {
+      "publishedBy": "By ",
+      "lastUpdatedDate": "Updated on: "
+   },
+
+   "page": {
+      "publishedBy": "By ",
+      "lastUpdatedDate": "Updated on: "
+   },
+
+   "tags": {
+      "tagsPageTitle": "Tags"
+   },
+
+   "error": {
+      "kicker": "Page not found",
+      "404": "This one is off the menu.",
+      "message": "The page you were after has moved or never existed. Head back to the front page for the menu, hours and a table.",
+      "button": "Back to the front page"
+   }
+}

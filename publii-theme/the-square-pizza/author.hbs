@@ -1,0 +1,18 @@
+{{! Author listing. Author pages are disabled in config.json; stub kept for
+    completeness. }}
+{{> head}}
+{{> navbar}}
+
+<main class="prose">
+   <section class="section">
+      <h1>{{author.name}}</h1>
+      {{#if author.description}}<div class="section-lede">{{{author.description}}}</div>{{/if}}
+      <ul class="post-list">
+         {{#each posts}}
+            <li><a href="{{url}}">{{title}}</a></li>
+         {{/each}}
+      </ul>
+   </section>
+</main>
+
+{{> footer}}

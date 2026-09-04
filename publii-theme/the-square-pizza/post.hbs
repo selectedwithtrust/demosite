@@ -1,0 +1,29 @@
+{{! Single post. Kept minimal - this theme is built around the front page, but
+    Publii requires post.hbs and some owners post news. }}
+{{> head}}
+{{> navbar}}
+
+<main class="prose">
+   {{#post}}
+      <article class="section">
+         <h1>{{title}}</h1>
+         <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">{{date createdAt}}</time>
+
+         {{#featuredImage}}
+            {{#if url}}
+               <figure class="prose-figure">
+                  <img src="{{url}}" {{lazyload "eager"}} height="{{height}}" width="{{width}}" alt="{{alt}}">
+               </figure>
+            {{/if}}
+         {{/featuredImage}}
+
+         <div class="prose-body">
+            {{{text}}}
+         </div>
+      </article>
+   {{/post}}
+
+   {{{@commentsCustomCode}}}
+</main>
+
+{{> footer}}

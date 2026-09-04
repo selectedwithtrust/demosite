@@ -1,0 +1,83 @@
+{{! Front page. The whole one-pager is built from Theme settings (Theme -> The
+    Square Pizza), not from blog posts. Edit everything under the settings groups
+    Restaurant / Menu / Visit / Selected With Trust / Colours / Layout / Footer. }}
+{{> head}}
+{{> navbar}}
+
+<main id="top">
+
+   <section class="hero">
+      {{#if @config.custom.kicker}}<p class="kicker">{{@config.custom.kicker}}</p>{{/if}}
+      <h1>{{@config.custom.heroHeading}}</h1>
+      <p class="hero-lede">{{@config.custom.heroLede}}</p>
+      <div class="hero-cta">
+         {{#if @config.custom.showBooking}}
+            <a class="btn btn-primary" href="#book">{{@config.custom.heroPrimaryLabel}}</a>
+         {{/if}}
+         <a class="btn btn-ghost" href="#menu">{{@config.custom.heroGhostLabel}}</a>
+      </div>
+   </section>
+
+   <section id="menu" class="section">
+      <h2>{{@config.custom.menuHeading}}</h2>
+      {{#if @config.custom.menuLede}}<p class="section-lede">{{@config.custom.menuLede}}</p>{{/if}}
+
+      {{#if @config.custom.menuPrimary}}
+         <div class="menu-group">
+            <h3>{{@config.custom.menuPrimaryHeading}}</h3>
+            <ul class="menu-list">
+               {{#each @config.custom.menuPrimary}}
+                  <li>
+                     <span class="menu-name">{{name}}</span>
+                     <span class="menu-dots" aria-hidden="true"></span>
+                     <span class="menu-price">{{price}}</span>
+                     {{#if description}}<span class="menu-desc">{{description}}</span>{{/if}}
+                  </li>
+               {{/each}}
+            </ul>
+         </div>
+      {{/if}}
+
+      {{#if @config.custom.menuSecondary}}
+         <div class="menu-group">
+            <h3>{{@config.custom.menuSecondaryHeading}}</h3>
+            <ul class="menu-list">
+               {{#each @config.custom.menuSecondary}}
+                  <li>
+                     <span class="menu-name">{{name}}</span>
+                     <span class="menu-dots" aria-hidden="true"></span>
+                     <span class="menu-price">{{price}}</span>
+                     {{#if description}}<span class="menu-desc">{{description}}</span>{{/if}}
+                  </li>
+               {{/each}}
+            </ul>
+         </div>
+      {{/if}}
+   </section>
+
+   <section id="visit" class="section section-split">
+      <div>
+         <h2>{{@config.custom.visitHeading}}</h2>
+         <p class="section-lede">{{@config.custom.visitLede}}</p>
+         <dl class="facts">
+            <div><dt>{{@config.custom.addressLabel}}</dt><dd>{{@config.custom.address}}</dd></div>
+            {{#each @config.custom.hours}}
+               <div><dt>{{label}}</dt><dd>{{value}}</dd></div>
+            {{/each}}
+            <div><dt>{{@config.custom.phoneLabel}}</dt><dd>{{@config.custom.phone}}</dd></div>
+         </dl>
+      </div>
+      {{> trust-seal}}
+   </section>
+
+   {{#if @config.custom.showReviewsWall}}
+      {{> reviews-wall}}
+   {{/if}}
+
+   {{#if @config.custom.showBooking}}
+      {{> booking}}
+   {{/if}}
+
+</main>
+
+{{> footer}}

@@ -1,0 +1,11 @@
+<section id="reviews" class="section">
+   <h2>{{@config.custom.reviewsHeading}}</h2>
+   <p class="section-lede">{{@config.custom.reviewsLede}}</p>
+
+   <div class="reviews-host">
+      {{! Same badge.js as the seal in the Visit panel, with data-swt-style="wall".
+          Shows sample reviews while Demo mode is on. }}
+      <div data-swt-badge="{{@config.custom.swtListingId}}" data-swt-style="wall"{{#if @config.custom.swtDemoMode}} data-swt-demo{{/if}}></div>
+      <script async src="{{@config.custom.swtScriptOrigin}}/badge.js"></script>
+   </div>
+</section>

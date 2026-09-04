@@ -1,0 +1,26 @@
+<footer class="site-foot">
+
+   <p class="foot-name">{{@website.name}}</p>
+   <p>{{@config.custom.address}} · {{@config.custom.phone}}</p>
+
+   {{#if menus.footerMenu}}
+      {{> menu menus.footerMenu}}
+   {{/if}}
+
+   {{#if @config.custom.showSwtCredit}}
+      <p class="foot-credit">
+         Free starter website by
+         <a href="https://selectedwithtrust.com">Selected With Trust</a>.
+      </p>
+   {{/if}}
+
+</footer>
+
+<script async src="{{js "scripts.js"}}"></script>
+
+{{{@footerCustomCode}}}
+
+{{{ publiiFooter }}}
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{{#unless level}}
+   <nav class="site-nav" aria-label="Primary">
+{{/unless}}
+
+      <ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true" {{else}} class="menu"{{/if}}>
+
+         {{#each items}}
+            <li{{menuItemClasses}}>
+
+            {{#if link}}
+               <a
+                  href="{{menuUrl}}"
+                  {{#if title}}title="{{title}}"{{/if}}
+                  {{#if target}}target="{{target}}"{{/if}}
+                  {{#if rel}}rel="{{rel}}"{{/if}}
+                  {{#if items}}aria-haspopup="true"{{/if}}>
+                  {{label}}
+               </a>
+            {{else}}
+               <span {{#if title}}title="{{title}}"{{/if}} {{#if items}}aria-haspopup="true"{{/if}}>
+                  {{label}}
+               </span>
+            {{/if}}
+
+            {{#if items}}
+               {{> menu}}
+            {{/if}}
+
+         </li>
+         {{/each}}
+
+      </ul>
+
+{{#unless level}}
+   </nav>
+{{/unless}}

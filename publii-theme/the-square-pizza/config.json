@@ -1,0 +1,516 @@
+{
+    "name": "The Square Pizza",
+    "version": "1.0.0",
+    "author": "Selected With Trust <https://selectedwithtrust.com/>",
+    "renderer": {
+        "createContentStructure": false,
+        "createTagPages": false,
+        "createAuthorPages": false,
+        "createTagsList": false,
+        "create404page": true,
+        "createSearchPage": false
+    },
+    "supportedFeatures": {
+        "blockEditor": true,
+        "pages": true,
+        "errorPage": true,
+        "embedConsents": true
+    },
+    "menus": {
+        "mainMenu": "Main menu",
+        "footerMenu": "Footer menu"
+    },
+    "config": [
+        {
+            "name": "postsPerPage",
+            "label": "Posts per page",
+            "value": 10,
+            "type": "number"
+        }
+    ],
+    "customConfig": [
+        {
+            "name": "kicker",
+            "label": "Kicker (small line above the headline)",
+            "group": "Restaurant",
+            "value": "Haarlem · since 2019",
+            "type": "text"
+        },
+        {
+            "name": "heroHeading",
+            "label": "Headline",
+            "group": "Restaurant",
+            "value": "Pizza with corners.",
+            "type": "text"
+        },
+        {
+            "name": "heroLede",
+            "label": "Intro paragraph",
+            "group": "Restaurant",
+            "value": "Detroit-style, twice-proved, baked in seasoned steel pans until the cheese caramelises against the edge. Eat in, take away, or book a table below.",
+            "type": "textarea"
+        },
+        {
+            "name": "heroPrimaryLabel",
+            "label": "Primary button label",
+            "group": "Restaurant",
+            "value": "Book a table",
+            "type": "text"
+        },
+        {
+            "name": "heroGhostLabel",
+            "label": "Secondary button label",
+            "group": "Restaurant",
+            "value": "See the menu",
+            "type": "text"
+        },
+        {
+            "name": "wordmarkMark",
+            "label": "Wordmark glyph (shown before the site name)",
+            "group": "Restaurant",
+            "note": "A single character. Leave empty to hide it.",
+            "value": "◧",
+            "type": "text"
+        },
+        {
+            "name": "menuHeading",
+            "label": "Section heading",
+            "group": "Menu",
+            "value": "The menu",
+            "type": "text"
+        },
+        {
+            "name": "menuLede",
+            "label": "Section intro",
+            "group": "Menu",
+            "value": "Every pie is an 8-slice square. Half-and-half on request.",
+            "type": "text"
+        },
+        {
+            "name": "menuPrimaryHeading",
+            "label": "First list heading",
+            "group": "Menu",
+            "value": "Squares",
+            "type": "text"
+        },
+        {
+            "name": "menuPrimary",
+            "label": "First list items",
+            "group": "Menu",
+            "type": "repeater",
+            "maxCount": 20,
+            "hasEmptyState": true,
+            "value": [
+                {
+                    "name": "The Motor City",
+                    "price": "€16",
+                    "description": "Brick cheese to the edge, two stripes of tomato, oregano."
+                },
+                {
+                    "name": "Pepperoni Cups",
+                    "price": "€18",
+                    "description": "The kind that curl and char. Hot honey optional, encouraged."
+                },
+                {
+                    "name": "Garden Square",
+                    "price": "€17",
+                    "description": "Roast courgette, red onion, basil, a lot of garlic."
+                },
+                {
+                    "name": "Bianca",
+                    "price": "€17",
+                    "description": "No tomato. Ricotta, mozzarella, lemon zest, black pepper."
+                }
+            ],
+            "structure": [
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "value": ""
+                },
+                {
+                    "name": "price",
+                    "label": "Price",
+                    "type": "text",
+                    "value": ""
+                },
+                {
+                    "name": "description",
+                    "label": "Description (optional)",
+                    "type": "textarea",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "name": "menuSecondaryHeading",
+            "label": "Second list heading",
+            "group": "Menu",
+            "value": "Sides & sweet",
+            "type": "text"
+        },
+        {
+            "name": "menuSecondary",
+            "label": "Second list items",
+            "group": "Menu",
+            "type": "repeater",
+            "maxCount": 20,
+            "hasEmptyState": true,
+            "value": [
+                {
+                    "name": "Dressed rocket & parmesan",
+                    "price": "€6",
+                    "description": ""
+                },
+                {
+                    "name": "Focaccia corners, whipped 'nduja butter",
+                    "price": "€7",
+                    "description": ""
+                },
+                {
+                    "name": "Olive-oil & sea-salt soft serve",
+                    "price": "€5",
+                    "description": ""
+                }
+            ],
+            "structure": [
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "value": ""
+                },
+                {
+                    "name": "price",
+                    "label": "Price",
+                    "type": "text",
+                    "value": ""
+                },
+                {
+                    "name": "description",
+                    "label": "Description (optional)",
+                    "type": "textarea",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "name": "visitHeading",
+            "label": "Section heading",
+            "group": "Visit",
+            "value": "Visit",
+            "type": "text"
+        },
+        {
+            "name": "visitLede",
+            "label": "Section intro",
+            "group": "Visit",
+            "value": "Small room, 34 covers. Walk-ins welcome at the bar; tables are best booked.",
+            "type": "textarea"
+        },
+        {
+            "name": "addressLabel",
+            "label": "Address label",
+            "group": "Visit",
+            "value": "Address",
+            "type": "text"
+        },
+        {
+            "name": "address",
+            "label": "Address",
+            "group": "Visit",
+            "value": "Lange Veerstraat 21, 2011 DA Haarlem",
+            "type": "text"
+        },
+        {
+            "name": "phoneLabel",
+            "label": "Phone label",
+            "group": "Visit",
+            "value": "Phone",
+            "type": "text"
+        },
+        {
+            "name": "phone",
+            "label": "Phone number",
+            "group": "Visit",
+            "value": "023 555 0142",
+            "type": "text"
+        },
+        {
+            "name": "hours",
+            "label": "Opening hours rows",
+            "group": "Visit",
+            "type": "repeater",
+            "maxCount": 10,
+            "hasEmptyState": true,
+            "value": [
+                {
+                    "label": "Wednesday to Friday",
+                    "value": "17:00 - 22:00"
+                },
+                {
+                    "label": "Saturday",
+                    "value": "15:00 - 22:30"
+                },
+                {
+                    "label": "Sunday",
+                    "value": "15:00 - 21:00"
+                },
+                {
+                    "label": "Monday to Tuesday",
+                    "value": "Closed"
+                }
+            ],
+            "structure": [
+                {
+                    "name": "label",
+                    "label": "Days",
+                    "type": "text",
+                    "value": ""
+                },
+                {
+                    "name": "value",
+                    "label": "Hours",
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "name": "trustPanelHeading",
+            "label": "Trust panel heading",
+            "group": "Visit",
+            "value": "Verified business",
+            "type": "text"
+        },
+        {
+            "name": "trustPanelBody",
+            "label": "Trust panel text",
+            "group": "Visit",
+            "value": "Our reviews and identity are checked and published by Selected With Trust. We can reply to reviews, but we cannot delete them.",
+            "type": "textarea"
+        },
+        {
+            "name": "swtScriptOrigin",
+            "label": "Widget script origin",
+            "group": "Selected With Trust",
+            "note": "Where badge.js and book.js load from. Leave as the default unless you self-host.",
+            "value": "https://selectedwithtrust.com",
+            "type": "text"
+        },
+        {
+            "name": "swtListingId",
+            "label": "Your listing ID",
+            "group": "Selected With Trust",
+            "note": "Find it on your Selected With Trust dashboard. The default is a demo ID that shows sample data.",
+            "value": "00000000-0000-4000-8000-000000000000",
+            "type": "text"
+        },
+        {
+            "name": "swtDemoMode",
+            "label": "Demo mode",
+            "group": "Selected With Trust",
+            "note": "On: widgets show sample data and never take a real booking. Turn off once your listing is live (Starter plan or above for booking).",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "swtBadgeStyle",
+            "label": "Trust badge style (Visit panel)",
+            "group": "Selected With Trust",
+            "value": "seal",
+            "type": "select",
+            "options": [
+                { "label": "Seal", "value": "seal" },
+                { "label": "Card", "value": "card" },
+                { "label": "Strip", "value": "strip" },
+                { "label": "Mini", "value": "mini" },
+                { "label": "Carousel", "value": "carousel" }
+            ]
+        },
+        {
+            "name": "showReviewsWall",
+            "label": "Show the reviews wall section",
+            "group": "Selected With Trust",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "reviewsHeading",
+            "label": "Reviews section heading",
+            "group": "Selected With Trust",
+            "value": "What people say",
+            "type": "text"
+        },
+        {
+            "name": "reviewsLede",
+            "label": "Reviews section intro",
+            "group": "Selected With Trust",
+            "value": "Every review here is verified and published by Selected With Trust. We can reply, but we cannot edit or delete them.",
+            "type": "textarea"
+        },
+        {
+            "name": "showBooking",
+            "label": "Show the booking section",
+            "group": "Selected With Trust",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "bookingHeading",
+            "label": "Booking section heading",
+            "group": "Selected With Trust",
+            "value": "Book a table",
+            "type": "text"
+        },
+        {
+            "name": "bookingLede",
+            "label": "Booking section intro",
+            "group": "Selected With Trust",
+            "value": "Reservations run through our Selected With Trust booking widget, on our own page, with zero commission on the booking.",
+            "type": "textarea"
+        },
+        {
+            "name": "bookingMode",
+            "label": "Booking widget mode",
+            "group": "Selected With Trust",
+            "note": "table for restaurants, appointment for services. Only affects demo mode.",
+            "value": "table",
+            "type": "select",
+            "options": [
+                { "label": "Table reservation", "value": "table" },
+                { "label": "Appointment", "value": "appointment" }
+            ]
+        },
+        {
+            "name": "paperColor",
+            "label": "Page background",
+            "group": "Colours",
+            "value": "#faf6f0",
+            "type": "colorpicker"
+        },
+        {
+            "name": "panelColor",
+            "label": "Panel background",
+            "group": "Colours",
+            "value": "#f2e7d5",
+            "type": "colorpicker"
+        },
+        {
+            "name": "inkColor",
+            "label": "Text",
+            "group": "Colours",
+            "value": "#241f1c",
+            "type": "colorpicker"
+        },
+        {
+            "name": "inkSoftColor",
+            "label": "Muted text",
+            "group": "Colours",
+            "value": "#5c534c",
+            "type": "colorpicker"
+        },
+        {
+            "name": "lineColor",
+            "label": "Lines and borders",
+            "group": "Colours",
+            "value": "#e2d5c1",
+            "type": "colorpicker"
+        },
+        {
+            "name": "accentColor",
+            "label": "Accent",
+            "group": "Colours",
+            "value": "#cf3b26",
+            "type": "colorpicker"
+        },
+        {
+            "name": "accentInkColor",
+            "label": "Accent (text on light)",
+            "group": "Colours",
+            "note": "A darker shade of the accent, used for links and hover.",
+            "value": "#a52c1b",
+            "type": "colorpicker"
+        },
+        {
+            "name": "secondaryColor",
+            "label": "Secondary accent",
+            "group": "Colours",
+            "value": "#3f6b3f",
+            "type": "colorpicker"
+        },
+        {
+            "name": "maxWidth",
+            "label": "Content width",
+            "group": "Layout",
+            "note": "Any CSS length, e.g. 62rem or 1000px.",
+            "value": "62rem",
+            "type": "text"
+        },
+        {
+            "name": "showSwtCredit",
+            "label": "Show \"Free starter website by Selected With Trust\" in the footer",
+            "group": "Footer",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "faviconUpload",
+            "label": "Favicon",
+            "group": "Additional",
+            "note": "16x16 or 32x32. Save as favicon.png or favicon.ico.",
+            "value": "",
+            "type": "smallupload",
+            "upload": true
+        },
+        {
+            "name": "faviconExtension",
+            "label": "Favicon type",
+            "group": "Additional",
+            "value": "image/png",
+            "type": "select",
+            "options": [
+                { "label": ".png", "value": "image/png" },
+                { "label": ".ico", "value": "image/x-icon" }
+            ]
+        }
+    ],
+    "files": {
+        "ignoreAssets": [
+            "scss",
+            ".DS_Store"
+        ],
+        "assetsPath": "assets",
+        "partialsPath": "partials",
+        "responsiveImages": {
+            "contentImages": {
+                "sizes": "(max-width: 1200px) 100vw, 1200px",
+                "dimensions": {
+                    "xs": { "width": 300, "height": "auto" },
+                    "sm": { "width": 480, "height": "auto" },
+                    "md": { "width": 768, "height": "auto" },
+                    "xl": { "width": 1200, "height": "auto" }
+                }
+            },
+            "featuredImages": {
+                "sizes": "(max-width: 1200px) 100vw, 1200px",
+                "dimensions": {
+                    "xs": { "width": 300, "height": "auto" },
+                    "sm": { "width": 480, "height": "auto" },
+                    "md": { "width": 768, "height": "auto" },
+                    "xl": { "width": 1200, "height": "auto" }
+                }
+            },
+            "optionImages": {
+                "sizes": "(max-width: 1200px) 100vw, 1200px",
+                "dimensions": {
+                    "xs": { "width": 300, "height": "auto" },
+                    "sm": { "width": 480, "height": "auto" },
+                    "md": { "width": 768, "height": "auto" },
+                    "xl": { "width": 1200, "height": "auto" }
+                }
+            }
+        }
+    }
+}

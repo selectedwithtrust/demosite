@@ -1,0 +1,25 @@
+<header class="site-head">
+
+   <a class="wordmark" href="{{@website.url}}">
+      {{#if @website.logo}}
+         <img src="{{@website.logo}}" alt="{{@website.name}}">
+      {{else}}
+         {{#if @config.custom.wordmarkMark}}<span class="wordmark-mark" aria-hidden="true">{{@config.custom.wordmarkMark}}</span>{{/if}}
+         {{@website.name}}
+      {{/if}}
+   </a>
+
+   {{! If a menu is assigned in Publii (Menus tab) it is used; otherwise the theme
+       falls back to the built-in one-page anchor nav below. }}
+   {{#if menus.mainMenu}}
+      {{> menu menus.mainMenu}}
+   {{else}}
+      <nav class="site-nav" aria-label="Primary">
+         <a href="#menu">Menu</a>
+         <a href="#visit">Visit</a>
+         {{#if @config.custom.showReviewsWall}}<a href="#reviews">Reviews</a>{{/if}}
+         {{#if @config.custom.showBooking}}<a href="#book">Book a table</a>{{/if}}
+      </nav>
+   {{/if}}
+
+</header>

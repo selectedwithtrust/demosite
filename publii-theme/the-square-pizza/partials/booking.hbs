@@ -1,0 +1,12 @@
+<section id="book" class="section">
+   <h2>{{@config.custom.bookingHeading}}</h2>
+   <p class="section-lede">{{@config.custom.bookingLede}}</p>
+
+   <div class="book-host">
+      {{! Booking widget. While Demo mode is on it runs the full flow as a preview
+          and never reserves anything. Turn Demo mode off once your listing is on
+          the Starter plan or above. }}
+      <div data-swt-book="{{@config.custom.swtListingId}}"{{#if @config.custom.swtDemoMode}} data-swt-demo="{{@config.custom.bookingMode}}"{{/if}}></div>
+      <script async src="{{@config.custom.swtScriptOrigin}}/book.js"></script>
+   </div>
+</section>

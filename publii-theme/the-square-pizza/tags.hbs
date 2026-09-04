@@ -1,0 +1,16 @@
+{{! All-tags listing. Disabled in config.json; stub kept for completeness. }}
+{{> head}}
+{{> navbar}}
+
+<main class="prose">
+   <section class="section">
+      <h1>{{ translate 'tags.tagsPageTitle' }}</h1>
+      <ul class="post-list">
+         {{#each tags}}
+            <li><a href="{{url}}">{{name}}</a></li>
+         {{/each}}
+      </ul>
+   </section>
+</main>
+
+{{> footer}}

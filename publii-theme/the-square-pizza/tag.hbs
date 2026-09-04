@@ -1,0 +1,18 @@
+{{! Tag listing. Tag pages are disabled in config.json; this stub exists so the
+    theme is complete if an owner re-enables them. }}
+{{> head}}
+{{> navbar}}
+
+<main class="prose">
+   <section class="section">
+      <h1>{{tag.name}}</h1>
+      {{#if tag.description}}<p class="section-lede">{{tag.description}}</p>{{/if}}
+      <ul class="post-list">
+         {{#each posts}}
+            <li><a href="{{url}}">{{title}}</a></li>
+         {{/each}}
+      </ul>
+   </section>
+</main>
+
+{{> footer}}

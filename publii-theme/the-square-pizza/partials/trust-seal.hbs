@@ -1,0 +1,9 @@
+<div class="trust-panel">
+   <h3>{{@config.custom.trustPanelHeading}}</h3>
+   <p>{{@config.custom.trustPanelBody}}</p>
+
+   {{! Trust badge. data-swt-badge is your listing ID; data-swt-demo shows sample
+       data and is emitted only while Demo mode is on in Theme settings. }}
+   <div data-swt-badge="{{@config.custom.swtListingId}}" data-swt-style="{{@config.custom.swtBadgeStyle}}"{{#if @config.custom.swtDemoMode}} data-swt-demo{{/if}}></div>
+   <script async src="{{@config.custom.swtScriptOrigin}}/badge.js"></script>
+</div>
